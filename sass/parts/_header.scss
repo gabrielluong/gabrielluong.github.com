@@ -354,7 +354,7 @@ $header-height: 30px;
 				&:hover{
 					border: 1px solid darken(#3E8DCC, 10%);
 				}
-			}			
+			}
 			&.linkedin{
 				background: image-url('social/linkedin.png') center no-repeat #005A87;
 				border: 1px solid #005A87;
@@ -384,7 +384,7 @@ $header-height: 30px;
 				background: image-url('social/500px.png') center no-repeat #373737;
 				border: 1px solid #373737;
 				&:hover{
-					border: 1px solid darken(#373737, 10%);
+					border: 1px solid #373737;
 				}
 			}
 			&.rss{
