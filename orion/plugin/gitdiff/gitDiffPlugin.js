@@ -10,7 +10,7 @@
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
 /*global define URL window*/
-define(["orion/plugin", "orion/Deferred", "orion/xhr", "domReady!"], function(PluginProvider, Deferred, xhr) {
+define(["orion/plugin", "orion/Deferred", "orion/xhr"], function(PluginProvider, Deferred, xhr) {
     var provider = new PluginProvider({
         name: "Git Diff Editor Annotation Plugin",
         version: "1.0",
