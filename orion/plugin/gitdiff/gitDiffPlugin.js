@@ -19,7 +19,7 @@ define(["orion/plugin", "orion/Deferred", "orion/xhr"], function(PluginProvider,
         website: "https://github.com/gabrielluong/orion-git-diff-plugin"
     });
     
-	provider.registerService("orion.core.diff", {
+	provider.registerServiceProvider(["orion.core.diff", {
 		getDiffContent: function(diffURI){	
 			var url = new URL(diffURI, window.location);
 			url.query.set("parts", "diff");
@@ -46,8 +46,10 @@ define(["orion/plugin", "orion/Deferred", "orion/xhr"], function(PluginProvider,
 			});
 		}
 	}, {
+		contentType: ["application/javascript", "text/html"],
 		name: "Git Diff",
-		key: ["g", false, false, true] //alt+g
+		key: ["g", false, false, true], //alt+g
+		pid: "gitDiff.config"
 	});
     provider.connect();
 });
