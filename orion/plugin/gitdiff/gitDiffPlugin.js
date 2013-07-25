@@ -19,35 +19,35 @@ define(["orion/plugin", "orion/Deferred", "orion/xhr", "domReady!"], function(Pl
         website: "https://github.com/gabrielluong/orion-git-diff-plugin"
     });
     
-	// provider.registerService("orion.core.diff", {
-	// 	getDiffContent: function(diffURI){	
-	// 		var url = new URL(diffURI, window.location);
-	// 		url.query.set("parts", "diff");
-	// 		return xhr("GET", url.href, {
-	// 			headers: {
-	// 				"Orion-Version": "1"
-	// 			},
-	// 			timeout: 15000
-	// 		}).then(function(xhrResult) {
-	// 			alert(xhrResult.responseText);
-	// 			return xhrResult.responseText;
-	// 		});
-	// 	},			
-	// 	getDiffFileURI: function(diffURI){
-	// 		var url = new URL(diffURI, window.location);
-	// 		url.query.set("parts", "uris");
-	// 		return xhr("GET", url.href, {
-	// 			headers: {
-	// 				"Orion-Version": "1"
-	// 			},
-	// 			timeout: 15000
-	// 		}).then(function(xhrResult) {
-	// 			return JSON.parse(xhrResult.responseText);
-	// 		});
-	// 	}
-	// }, {
-	// 	name: "Git Diff",
-	// 	key: ["g", false, false, true] //alt+g
-	// });
+	provider.registerService("orion.core.diff", {
+		getDiffContent: function(diffURI){	
+			var url = new URL(diffURI, window.location);
+			url.query.set("parts", "diff");
+			return xhr("GET", url.href, {
+				headers: {
+					"Orion-Version": "1"
+				},
+				timeout: 15000
+			}).then(function(xhrResult) {
+				alert(xhrResult.responseText);
+				return xhrResult.responseText;
+			});
+		},			
+		getDiffFileURI: function(diffURI){
+			var url = new URL(diffURI, window.location);
+			url.query.set("parts", "uris");
+			return xhr("GET", url.href, {
+				headers: {
+					"Orion-Version": "1"
+				},
+				timeout: 15000
+			}).then(function(xhrResult) {
+				return JSON.parse(xhrResult.responseText);
+			});
+		}
+	}, {
+		name: "Git Diff",
+		key: ["g", false, false, true] //alt+g
+	});
     provider.connect();
 });
