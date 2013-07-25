@@ -9,7 +9,9 @@
         require({
             baseUrl: ".",
             packages: [],
-            paths: {}
+            paths: {
+                domReady: 'requirejs/domReady'
+            }
         });
         require(["gitDiffPlugin.js"]);
     </script>
