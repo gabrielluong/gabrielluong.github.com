@@ -1,23 +1,85 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
-{% include head.html %}
+<!doctype html>
+<!-- START OF _layouts/default.html -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<meta content="{{ site.description }}" name="description">
+		<meta content="{{ site.title }}" name="author">
 
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-			<header id="header" class="inner">{% include header.html %}</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			{% unless page.banner == false %}
-				{% include banner.html %}
-			{% endunless %}
-			<div class="mid-col-container">
-				<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
-			</div>
-			<footer id="footer" class="inner">{% include footer.html %}</footer>
-			{% include after_footer.html %}
-		</div>
-	</div>
-</body>
+		<title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
+
+		<!-- Styles -->
+		<link href="{{ root_url }}/stylesheets/main.css" rel="stylesheet">
+
+		<!-- Google webfonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cousine">
+
+		<!-- jQuery and plugins -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="{{ root_url }}/js/jquery.zclip.min.js"></script>
+
+		<!-- Syntax highlighter -->
+		<link href="{{ root_url }}/stylesheets/prettify-hemisu.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="{{ root_url }}/js/prettify.js"></script>
+
+		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="{{ site.title }}" type="application/rss+xml" />-->
+
+	</head>
+	<body onload="prettyPrint()">
+
+		<div class="wrap">
+
+			<header>
+				<div class="title">{{ site.title }}</div>
+				<p class="subtitle">Hi, I'm a Computer Science student studying at University of Toronto. I am also a Mozilla contributor for Firefox Devtools and Eclipse Orion Committer.</p>
+				<div class="navi">
+					<ul>
+						<li><a class="twitter" href="http://twitter.com/GabrielLuong" title="Twitter">Twitter</a></li>
+						<li><a class="github" href="https://github.com/gabrielluong" title="GitHub">GitHub</a></li>
+						<li><a class="linkedin" href="http://www.linkedin.com/in/gabrielluong">LinkedIn</a></li>
+						<li><a class="px" href="https://500px.com/gabrielluong">500px</a></li>
+						<li><a href="mailto:gabriel.luong@gmail.com">Email</a>
+					</ul>
+				</div> <!-- // .navi -->
+			</header>
+
+			<footer>
+				{% include footer.html %}
+			</footer>
+
+		</div> <!-- // .wrap -->
+	</body>
+	<script>
+		$(document).ready(function() {
+			// Make images center
+			$('p:has(img)').css('text-align', 'center');
+
+			// Add the image's title attribute as a caption
+			$('p:has(img)').append(function () {
+				return '<div class="caption">' + $('img', this).attr('title') + '</div>';
+			});
+
+			// Prettify code
+			$('code').addClass('prettyprint');
+			$('pre code').addClass('linenums');
+
+			// Copy to clipboard with button
+			$('pre:has(code)').prepend(function(){
+				return '<div class="clip-btn">copy to clipboard</div>';
+			});
+			$('.clip-btn').zclip({
+				path:'{{ root_url }}/js/ZeroClipboard.swf',
+				copy: $(this).next('code').text(),
+				afterCopy: function(){
+					$(this).replaceWith('<div class="clip-btn">copied!');
+					}
+			});
+		});
+	</script>
+	{% include google_analytics.html %}
 </html>
+<!-- END OF _layouts/default.html -->
