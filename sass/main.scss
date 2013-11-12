@@ -21,7 +21,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	border-top: $top-line-weight solid $black;
+	border-top: $top-line-weight solid $main-color;
 	font-family: $body-font;
 	font-size: $body-font-size;
 	color: $black;
@@ -75,6 +75,17 @@ header {
 	padding: $header-spacing 0;
 	// border-bottom: 1px solid $light-gray;
 	text-align: center;
+
+	.profilepic {
+		margin-bottom: 15px;
+
+		img {
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            width: 160px;
+		}
+	}
 
 	.title {
 		font-family: $blog-title-font;

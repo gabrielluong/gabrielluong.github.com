@@ -4,7 +4,7 @@
 
 url: http://gabrielluong.com
 title: Gabriel Luong
-subtitle: Just relax because life is redonkulous 
+subtitle: Just relax because life is redonkulous
 author: Gabriel Luong
 simple_search: http://google.com/search
 description:
@@ -20,6 +20,7 @@ subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email: gabriel.luong@gmail.com
+email_md5: 8d4b3dd6d3dd0178956876e108d984c6
 
 # ----------------------- #
 #    Jekyll & Plugins     #
