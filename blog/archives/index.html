@@ -37,15 +37,18 @@
 			<header id="header" class="inner"><div class="profilepic">
 	<script src="/javascripts/md5.js"></script>
 	<script type="text/javascript">
-		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("gabriel.luong@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("gabriel.luong@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
 	</script>
 </div>
-<h1><a href="/">Gabriel Luong</a></h1>
-<p class="subtitle">Why hello there! I am a computer science student from uoft undercover in Ottawa working as a contributor on Eclipse Orion at IBM. This is a commentary of my big ideas and adventures.</p>
+
+<p class="subtitle">Just relax because life is redonkulous</p>
 <nav id="main-nav"><ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
+
 </nav>
 <nav id="sub-nav">
 	<div class="social">
@@ -56,6 +59,7 @@
 		
 		
 		<a class="github" href="https://github.com/gabrielluong" title="GitHub">GitHub</a>
+		
 		
 		
 		<a class="linkedin" href="http://www.linkedin.com/in/gabrielluong">LinkedIn</a>
@@ -71,7 +75,6 @@
 		
 	</div>
 </nav>
-
 </header>				
 			</div>
 		</div>	
