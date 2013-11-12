@@ -1,143 +1,102 @@
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Gabriel Luong</title>
-	<meta name="author" content="Gabriel Luong">
+<!doctype html>
+<!-- START OF _layouts/default.html -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<meta content="" name="description">
+		<meta content="Gabriel Luong" name="author">
 
-	
-	<meta name="description" content=" Blog Archives
-">
-	
+		<title>Gabriel Luong</title>
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Styles -->
+		<link href="/stylesheets/main.css" rel="stylesheet">
 
-	<link href="/atom.xml" rel="alternate" title="Gabriel Luong" type="application/atom+xml">
-	
-	<link rel="canonical" href="http://gabrielluong.com/">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
-	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+		<!-- Google webfonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cousine">
 
-</head>
+		<!-- jQuery and plugins -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="/js/jquery.zclip.min.js"></script>
+
+		<!-- Syntax highlighter -->
+		<link href="/stylesheets/prettify-hemisu.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="/js/prettify.js"></script>
+
+		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="Gabriel Luong" type="application/rss+xml" />-->
+
+	</head>
+	<body onload="prettyPrint()">
+
+		<div class="wrap">
+
+			<header>
+				<div class="title">Gabriel Luong</div>
+				<p class="subtitle">Hi, I'm a Computer Science student studying at University of Toronto. I am also a Mozilla contributor for Firefox Devtools and Eclipse Orion Committer.</p>
+				<div class="navi">
+					<ul>
+						<li><a class="twitter" href="http://twitter.com/GabrielLuong" title="Twitter">Twitter</a></li>
+						<li><a class="github" href="https://github.com/gabrielluong" title="GitHub">GitHub</a></li>
+						<li><a class="linkedin" href="http://www.linkedin.com/in/gabrielluong">LinkedIn</a></li>
+						<li><a class="px" href="https://500px.com/gabrielluong">500px</a></li>
+						<li><a href="mailto:gabriel.luong@gmail.com">Email</a>
+					</ul>
+				</div> <!-- // .navi -->
+			</header>
+
+			<footer>
+				Copyright &copy; 2013
+
+	Gabriel Luong
 
 
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-			<header id="header" class="inner"><div class="profilepic">
-	<script src="/javascripts/md5.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("gabriel.luong@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+			</footer>
+
+		</div> <!-- // .wrap -->
+	</body>
+	<script>
+		$(document).ready(function() {
+			// Make images center
+			$('p:has(img)').css('text-align', 'center');
+
+			// Add the image's title attribute as a caption
+			$('p:has(img)').append(function () {
+				return '<div class="caption">' + $('img', this).attr('title') + '</div>';
+			});
+
+			// Prettify code
+			$('code').addClass('prettyprint');
+			$('pre code').addClass('linenums');
+
+			// Copy to clipboard with button
+			$('pre:has(code)').prepend(function(){
+				return '<div class="clip-btn">copy to clipboard</div>';
+			});
+			$('.clip-btn').zclip({
+				path:'/js/ZeroClipboard.swf',
+				copy: $(this).next('code').text(),
+				afterCopy: function(){
+					$(this).replaceWith('<div class="clip-btn">copied!');
+					}
+			});
 		});
 	</script>
-</div>
+	
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38214827-1']);
+    _gaq.push(['_trackPageview']);
 
-<p class="subtitle">Just relax because life is redonkulous</p>
-<nav id="main-nav"><ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-<nav id="sub-nav">
-	<div class="social">
-		
-		
-		
-		<a class="twitter" href="http://twitter.com/GabrielLuong" title="Twitter">Twitter</a>
-		
-		
-		<a class="github" href="https://github.com/gabrielluong" title="GitHub">GitHub</a>
-		
-		
-		
-		<a class="linkedin" href="http://www.linkedin.com/in/gabrielluong">LinkedIn</a>
-		
-		
-		
-		
-		
-		<a class="px" href="https://500px.com/gabrielluong">500px</a>
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-	</div>
-</nav>
-</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			
-				
-			
-			<div class="mid-col-container">
-				<div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
-
-</div>
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
-			</div>
-			<footer id="footer" class="inner"><p>
-  Copyright &copy; 2013 - Gabriel Luong
-</p>
-</footer>
-			<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
 
-<script type="text/javascript">
-      var disqus_shortname = 'gabrielluong';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-38214827-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-
-
-
-
-		</div>
-	</div>
-</body>
 </html>
+<!-- END OF _layouts/default.html -->

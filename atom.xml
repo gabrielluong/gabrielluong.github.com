@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Gabriel Luong]]></title>
-  <link href="http://gabrielluong.com/atom.xml" rel="self"/>
-  <link href="http://gabrielluong.com/"/>
-  <updated>2013-06-15T22:34:45-04:00</updated>
-  <id>http://gabrielluong.com/</id>
-  <author>
-    <name><![CDATA[Gabriel Luong]]></name>
-    <email><![CDATA[gabriel.luong@gmail.com]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+	<title><![CDATA[Gabriel Luong]]></title>
+	<link href="http://gabrielluong.com/atom.xml" rel="self"/>
+	<link href="http://gabrielluong.com/"/>
+	<updated>2013-11-11T20:24:14-05:00</updated>
+	<id>http://gabrielluong.com/</id>
+	<author>
+		<name><![CDATA[Gabriel Luong]]></name>
+		<email><![CDATA[gabriel.luong@gmail.com]]></email>
+	</author>
+	<generator uri="http://octopress.org/">Octopress</generator>
 
-  
+	
 </feed>
